@@ -1,0 +1,85 @@
+body {
+    font-size: 16px;
+    padding: 20px 100px 0px 100px;
+    background-color: #092A7D;
+    font-family: Montserrat;
+}
+
+h1 {
+    color: #eeeeee;
+    font-size: 80px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.footer {
+    color: #eeeeee;
+    text-align: center;
+}
+
+a {
+    color: #eeeeee;
+}
+
+/* List */
+ul {
+    list-style: none;
+    -webkit-padding-start: 0px;
+}
+
+li {
+    background-color: #eeeeee;
+    width: 500px;
+    min-height: 40px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price {
+    margin-left:auto;
+    margin-right:3%;
+}
+
+.selected {
+    background-color: #2CDB77;
+    color: #eeeeee;
+    font-weight: 800;
+}
+
+button {
+    color: black;
+    background-color: #eeeeee;
+    min-height: 40px;
+    font-size: 1em;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    visibility: hidden;
+}
+
+.buttonAppear {
+    visibility:visible;
+}
+
+.money {
+    background-color: white;
+    background-image: url("images/m4.gif");
+}
+
+#money_text {
+    color: white;
+    font-weight: 900;
+    font-size: 200px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    animation: blinker 1s linear infinite;
+}
+  
+  @keyframes blinker {  
+    50% { opacity: 0; }
+  }

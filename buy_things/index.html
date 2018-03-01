@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="./styles.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,800,900" rel="stylesheet">
         <title>Buy Things!</title>
     </head>
     <body>
@@ -9,13 +10,17 @@
             <h1>Buy Things!</h1>
             <!-- add controls -->
             <ul>
-                <li v-for="item in products">
+                <li v-for="item in products" v-bind:class="{ selected: item.selected }">
                     <input type="checkbox" v-model="item.selected" v-on:click="selectItem(item)"/>
-                    <label v-bind:class="{ selected: item.selected }">{{item.text}}  ${{item.price}}</label>
+                    <label >{{item.text}}</label>  <label class="price">${{item.price}}</label>
                 </li>
             </ul>
-            <p>Total: ${{this.total}}</p>
+            <button v-on:click="pay()" v-bind:class="{ buttonAppear: somethingSelected}">Buy this for ${{this.total}}!</button>>
         </div>
+        <div class="footer">
+            <p>Created by Lucy Johnston<br>
+            <a href="https://github.com/ljohnston931/buy_things">GitHub Link</a></p>
+          </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
         <script src="./script.js"></script>
     </body>
