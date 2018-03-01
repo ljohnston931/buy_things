@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./styles.css"/>
+        <title>Buy Things!</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Buy Things!</h1>
+            <!-- add controls -->
+            <ul>
+                <li v-for="item in products">
+                    <input type="checkbox" v-model="item.selected" v-on:click="selectItem(item)"/>
+                    <label v-bind:class="{ selected: item.selected }">{{item.text}}  ${{item.price}}</label>
+                </li>
+            </ul>
+            <p>Total: ${{this.total}}</p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>
